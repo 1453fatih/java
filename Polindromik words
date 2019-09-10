@@ -1,0 +1,32 @@
+package Fatih;
+
+import java.util.Scanner;
+
+public class Fatih {
+
+    public static void main(String args[]) {
+        System.out.println("Lütfen kontrol etmek istediğiniz kelimeyi girermisiniz ? ");
+
+        Scanner scan = new Scanner(System.in);
+        String giris = scan.nextLine();
+
+        int uzunluk = giris.length();
+
+        int j;
+        String ters = "";
+
+        for (j = uzunluk - 1; j >= 0; j--) {
+
+            ters += giris.charAt(j);
+
+        }
+
+        if (giris.equals(ters)) {
+
+            System.out.println("Girdiğiniz kelime bir polindromik kelimedir :)");
+        } else {
+            System.out.println("Girdğiniz kelime polindromik bir kelime değildir üzgünüm :(");
+        }
+    }
+
+}
