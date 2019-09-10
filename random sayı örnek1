@@ -1,0 +1,24 @@
+package Fatih;
+
+import java.util.Scanner;
+
+public class Fatih {
+
+    public static void main(String args[]) {
+        //Soru = 0 ile 1000 arasında random bir sayı oluşturarak bu sayının rakamları toplamını veren java algoritma kodunu yazınız ?
+
+        int sayi;
+        sayi = (int) (Math.random() * 1000);   // Math.random kodmuz 0 ile 1 arasında double tipinde sayı üretir. 1000 ile çarptık ve 0-1000 arası sayı ürettik.
+
+        int yuzler_Basamagi = sayi / 100;    // yüzler basamağındaki sayıyı bulduk.
+        int onlar_Basamagi = sayi / 10;
+        onlar_Basamagi = onlar_Basamagi % 10;      //  onlar basamağındaki sayıyı bulduk.   
+        int birler_basamagi = sayi % 10; // mod 10 almızın sebebi 1 ler basamağını bulmak. 10 a böldüğümüzde kalan kısım birler basamağıdır.
+        System.out.println("Rastgele oluşturulan sayımız= " + sayi);
+        System.out.println("Yüzler basamağındaki sayımız= " + yuzler_Basamagi);
+        System.out.println("Onlar basamağındaki sayımız= " + onlar_Basamagi);
+        System.out.println("Birler basamağındaki sayımız= " + birler_basamagi);
+        System.out.println("Basamaklardkai sayılarımızın toplamı= " + (yuzler_Basamagi + onlar_Basamagi + birler_basamagi));
+    }
+
+}
